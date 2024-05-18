@@ -1,10 +1,8 @@
 <header>
   <nav class='navbar navbar-expand-lg navigation navbar-light bg-light'>
-    <!-- link_toを使う形に修正してください -->
-    <a class='navbar-brand' href='/'>
-      <!-- image_tagを使う形に修正してください -->
+    <%= link_to('/', class: 'navbar-brand') do %>
       <%= image_tag('logo.png') %>
-    </a>
+    <% end %>
     <button class='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent'
       aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
       <span class='navbar-toggler-icon'></span>
@@ -13,37 +11,38 @@
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
       <ul class='navbar-nav ms-auto main-nav align-items-center'>
         <li class='nav-item dropdown dropdown-slide'>
-          <!-- link_toを使う形に修正してください -->
-          <a href='#' class='nav-link dropdown-toggle' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-            掲示板
-          </a>
+          <%= link_to('#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' }) do %>
+            期限チェック
+          <% end %>
           <div class='dropdown-menu dropdown-menu-end'>
-            <!-- link_toを使う形に修正してください -->
-            <a class='dropdown-item' href='#'>掲示板一覧</a>
-            <!-- link_toを使う形に修正してください -->
-            <a class='dropdown-item' href='#'>掲示板作成</a>
+            <%= link_to('#', class: 'dropdown-item') do %>
+              期限チェックリスト
+            <% end %>
+            <%= link_to('#', class: 'dropdown-item') do %>
+              期限チェックリスト作成
+            <% end %>
           </div>
         </li>
 
         <li class='nav-item'>
-          <!-- link_toを使う形に修正してください -->
-          <a class='nav-link' href='#'>ブックマーク一覧</a>
+          <%= link_to('#', class: 'nav-link') do %>
+            ブックマーク一覧
+          <% end %>
         </li>
 
         <li class='nav-item dropdown dropdown-slide'>
-          <!-- link_toを使う形に修正してくださいdata属性、area属性の書き方は次の通りです。-->
-          <!-- data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' } -->
-          <a href='#' class='nav-link' data-bs-toggle='dropdown' aria-haspopup='true' aria-expanded='false' id='header-profile'>
-            <!-- image_tagを使う形に修正してください -->
-            <img class='rounded-circle mr15' src='sample.jpg' width='40' height='40' />
-          </a>
+          <%= link_to('#', class: 'nav-link', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' }, id: 'header-profile') do %>
+            <%= image_tag('sample.jpg', class: 'rounded-circle mr15', width: '40', height: '40') %>
+          <% end %>
           <div class='dropdown-menu dropdown-menu-end'>
             <div class='dropdown-item'>らんてっく たろう</div>
             <div class='dropdown-divider'></div>
-            <!-- link_toを使う形に修正してください -->
-            <a class='dropdown-item' href='#'>プロフィール</a>
-            <!-- link_toを使う形に修正してください -->
-            <a class='dropdown-item' href='#'>ログアウト</a>
+            <%= link_to('#', class: 'dropdown-item') do %>
+              プロフィール
+            <% end %>
+            <%= link_to('#', class: 'dropdown-item') do %>
+              ログアウト
+            <% end %>
           </div>
         </li>
       </ul>
