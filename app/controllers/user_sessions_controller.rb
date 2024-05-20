@@ -16,7 +16,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
     logout
-    flash[:success] = t('.logout_success')
+    flash[:success] = t('user_sessions.logout_success')
     redirect_to root_path, status: :see_other
   end
 end
