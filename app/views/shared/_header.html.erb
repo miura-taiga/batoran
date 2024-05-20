@@ -40,9 +40,7 @@
             <%= link_to('#', class: 'dropdown-item') do %>
               プロフィール
             <% end %>
-            <%= link_to('#', class: 'dropdown-item') do %>
-              ログアウト
-            <% end %>
+            <%= link_to 'ログアウト', logout_path, class: 'dropdown-item', data: { turbo_method: :delete } %>
           </div>
         </li>
       </ul>
