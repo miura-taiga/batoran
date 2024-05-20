@@ -1,0 +1,51 @@
+<header>
+  <nav class='navbar navbar-expand-lg navigation navbar-light bg-light'>
+    <%= link_to('/', class: 'navbar-brand') do %>
+      <%= image_tag('logo.png') %>
+    <% end %>
+    <button class='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent'
+      aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+      <span class='navbar-toggler-icon'></span>
+    </button>
+
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+      <ul class='navbar-nav ms-auto main-nav align-items-center'>
+        <li class='nav-item dropdown dropdown-slide'>
+          <%= link_to('#', class: 'nav-link dropdown-toggle', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' }) do %>
+            期限チェック
+          <% end %>
+          <div class='dropdown-menu dropdown-menu-end'>
+            <%= link_to('#', class: 'dropdown-item') do %>
+              期限チェックリスト
+            <% end %>
+            <%= link_to('#', class: 'dropdown-item') do %>
+              期限チェックリスト作成
+            <% end %>
+          </div>
+        </li>
+
+        <li class='nav-item'>
+          <%= link_to('#', class: 'nav-link') do %>
+            ブックマーク一覧
+          <% end %>
+        </li>
+
+        <li class='nav-item dropdown dropdown-slide'>
+          <%= link_to('#', class: 'nav-link', data: { bs_toggle: 'dropdown' }, aria: { haspopup: 'true', expanded: 'false' }, id: 'header-profile') do %>
+            <%= image_tag('sample.jpg', class: 'rounded-circle mr15', width: '40', height: '40') %>
+          <% end %>
+          <div class='dropdown-menu dropdown-menu-end'>
+            <div class='dropdown-item'>らんてっく たろう</div>
+            <div class='dropdown-divider'></div>
+            <%= link_to('#', class: 'dropdown-item') do %>
+              プロフィール
+            <% end %>
+            <%= link_to('#', class: 'dropdown-item') do %>
+              ログアウト
+            <% end %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
