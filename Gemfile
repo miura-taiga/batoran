@@ -45,6 +45,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem 'sorcery', '0.16.3'
 gem 'rails-i18n', '~> 7.0.0'
+gem 'draper', '4.0.2'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

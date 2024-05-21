@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   def not_authenticated
     redirect_to login_path
   end
+
+  def set_current_user
+    @current_user = current_user.decorate if current_user
+  end
 end

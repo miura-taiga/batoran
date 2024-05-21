@@ -43,6 +43,10 @@
             <%= link_to t('header.logout'), logout_path, class: 'dropdown-item', data: { turbo_method: :delete } %>
           </div>
         </li>
+
+        <% if current_user %>
+          <span><%= current_user.decorate.full_name %></span>
+        <% end %>
       </ul>
     </div>
   </nav>
