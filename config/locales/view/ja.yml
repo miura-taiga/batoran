@@ -16,7 +16,7 @@ ja:
     create:
       login_success: ログインしました
       login_failure: ログインに失敗しました
-      logout_success: ログアウトしました
+    logout_success: ログアウトしました
   users:
     new:
       title: ユーザー登録
