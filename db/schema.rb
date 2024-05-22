@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_19_123613) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_21_131141) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boards", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "store_name"
+    t.string "product_name"
+    t.string "jan_code"
+    t.date "expiration_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_boards_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false
@@ -25,4 +36,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_19_123613) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "boards", "users"
 end

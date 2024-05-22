@@ -32,3 +32,11 @@ ja:
     bookmark_index: ブックマーク一覧
     profile: プロフィール
     deadline:
+  ja:
+  time:
+    formats:
+      short: "%Y/%m/%d %H:%M"
+  flash:
+    not_authenticated: "ログインしてください"
+    
+

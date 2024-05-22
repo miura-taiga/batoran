@@ -1,0 +1,50 @@
+<div class="container pt-3">
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1">
+      <!-- 検索フォーム -->
+      <form>
+        <div class="input-group mb-3">
+          <input class="form-control" placeholder="検索ワード" type="search" />
+          <div class="input-group-append">
+            <input type="submit" value="検索" class="btn btn-primary" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- 掲示板一覧 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <% if @boards.any? %>
+          <% @boards.each do |board| %>
+            <div class="col-sm-12 col-lg-4 mb-3">
+              <div id="board-id-<%= board.id %>">
+                <%= link_to board.shop_name, "#" %>
+                <div class="ms-auto">
+                  <%= link_to "#", id: "button-edit-#{board.id}" do %>
+                    <i class="bi bi-pencil-fill"></i>
+                  <% end %>
+                  <%= link_to "#", id: "button-delete-#{board.id}", method: :delete, data: { confirm: "" } do %>
+                    <i class="bi bi-trash-fill"></i>
+                  <% end %>
+                </div>
+                <ul class="list-inline">
+                  <li><i class="bi bi-person"></i> <%= board.product_name %></li>
+                  <li><i class="bi bi-barcode"></i> <%= board.jan_code %></li>
+                  <li><i class="bi bi-calendar"></i> <%= board.expiry_date %></li>
+                </ul>
+                <p class="card-text"><%= board.description %></p>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="col-12">
+            <p>掲示板がありません</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
