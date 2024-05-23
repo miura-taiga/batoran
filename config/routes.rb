@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
 
   get "up" => "rails/health#show", as: :rails_health_check
+
+  resources :boards, only: [:index]
 end

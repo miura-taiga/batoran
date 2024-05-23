@@ -115,6 +115,8 @@ GEM
       ruby2_keywords
     drb (2.2.1)
     erubi (1.12.0)
+    faker (3.3.1)
+      i18n (>= 1.8.11, < 2)
     faraday (2.9.0)
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
@@ -305,6 +307,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   draper (= 4.0.2)
+  faker
   jbuilder
   jsbundling-rails
   pg (~> 1.1)

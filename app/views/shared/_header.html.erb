@@ -15,9 +15,7 @@
             期限チェック
           <% end %>
           <div class='dropdown-menu dropdown-menu-end'>
-            <%= link_to('#', class: 'dropdown-item') do %>
-              期限チェックリスト
-            <% end %>
+            <%= link_to "期限チェックリスト", boards_path, class: 'dropdown-item' %>
             <%= link_to('#', class: 'dropdown-item') do %>
               期限チェックリスト作成
             <% end %>
@@ -35,7 +33,7 @@
             <%= image_tag('sample.jpg', class: 'rounded-circle mr15', width: '40', height: '40') %>
           <% end %>
           <div class='dropdown-menu dropdown-menu-end'>
-            <div class='dropdown-item'>らんてっく たろう</div>
+            <div class='dropdown-item'><%= current_user.decorate.full_name %></div>
             <div class='dropdown-divider'></div>
             <%= link_to('#', class: 'dropdown-item') do %>
               プロフィール
