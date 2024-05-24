@@ -9,3 +9,8 @@ ja:
         first_name: 名
         password: パスワード
         password_confirmation: パスワード確認
+      board:
+        store_name: 店名
+        product_name: 商品名
+        jan_code: JANコード
+        expiration_date: 期限日

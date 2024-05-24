@@ -3,24 +3,25 @@
     <div class="col-lg-8 offset-lg-2">
       <h1>期限チェックリスト作成</h1>
       <!-- ここからform_withを使う形に修正してください -->
-      <%= form_with(model: @board, local: true, class: "new_board") do |form| %>
+      <%= form_with(model: @board, local: true, class: "new_board") do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
         <div class="mb-3">
-          <%= form.label :store_name, "店名" %>
-          <%= form.text_field :store_name, id: "board_store_name", class: "form-control" %>
+          <%= f.label :store_name, "店名" %>
+          <%= f.text_field :store_name, id: "boards.store_name", class: "form-control" %>
         </div>
         <div class="mb-3">
-          <%= form.label :product_name, "商品名" %>
-          <%= form.text_field :product_name, id: "board_product_name", class: "form-control" %>
+          <%= f.label :product_name, "商品名" %>
+          <%= f.text_field :product_name, id: "board_product_name", class: "form-control" %>
         </div>
         <div class="mb-3">
-          <%= form.label :jan_code, "JANコード" %>
-          <%= form.text_field :jan_code, id: "board_jan_code", class: "form-control" %>
+          <%= f.label :jan_code, "JANコード" %>
+          <%= f.text_field :jan_code, id: "board_jan_code", class: "form-control" %>
         </div>
         <div class="mb-3">
-          <%= form.label :expiration_date, "期限日" %>
-          <%= form.text_field :expiration_date, id: "board_expiration_date", class: "form-control" %>
+          <%= f.label :expiration_date, "期限日" %>
+          <%= f.text_field :expiration_date, id: "board_expiration_date", class: "form-control" %>
         </div>
-        <%= form.submit "登録", class: "btn btn-primary", data: { disable_with: "登録中..." } %>
+        <%= f.submit "登録", class: "btn btn-primary", data: { disable_with: "登録中..." } %>
       <% end %>
       <!-- ここまでform_withを使う形に修正してください -->
     </div>
