@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
     else
       flash[:danger] = t('comments.comment_danger')
       @board = Board.find(params[:board_id])
+      @comments = @board.comments.includes(:user).order(created_at: :desc) # ここで@commentsをセット
       render 'boards/show', status: :unprocessable_entity
     end
   end
@@ -14,6 +15,6 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:body).merge(user_id: current_user.id)
+    params.require(:comment).permit(:body, :board_id).merge(user_id: current_user.id)
   end
 end

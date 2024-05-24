@@ -2,6 +2,8 @@ ja:
   activerecord:
     models:
       user: ユーザー
+      board: 掲示板
+      comment: コメント
     attributes:
       user:
         email: メールアドレス
@@ -14,3 +16,5 @@ ja:
         product_name: 商品名
         jan_code: JANコード
         expiration_date: 期限日
+      comment:
+        body: コメント
