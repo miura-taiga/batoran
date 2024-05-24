@@ -50,5 +50,5 @@ ja:
       title: 掲示板詳細
   comments:
     comment_success: コメントを作成しました
-    comment_dander: コメントを作成出来ませんでした
+    comment_danger: コメントを作成出来ませんでした
   

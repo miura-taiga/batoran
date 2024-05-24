@@ -13,4 +13,8 @@ class User < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
+  def own?(comment)
+    self.id == comment.user_id
+  end
+
 end
