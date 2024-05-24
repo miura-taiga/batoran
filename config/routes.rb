@@ -19,4 +19,9 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   resources :boards, only: [:new, :create, :index]
+
+  # コメント処理のルート設定
+  resources :boards do
+    resources :comments, shallow: true, only: %i[create]
+  end
 end
