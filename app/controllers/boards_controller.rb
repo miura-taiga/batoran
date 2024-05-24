@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :require_login, only: %i[index new create]
+  before_action :require_login, only: %i[index new create show]
 
   def index
     @boards = Board.includes(:user).order(created_at: :desc)
@@ -18,6 +18,13 @@ class BoardsController < ApplicationController
       flash[:danger] = t('flash.boards.danger', item: Board.model_name.human)
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @board = Board.find(params[:id])
+    @comment = Comment.new
+    @store_name = @board.store_name
+    @comments = @board.comments.includes(:user).order(created_at: :desc)
   end
 
   private

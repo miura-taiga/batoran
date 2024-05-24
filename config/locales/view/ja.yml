@@ -41,5 +41,14 @@ ja:
     boards:
       success: 期限チェックリストを作成できました
       danger: 期限チェックリストを作成できませんでした
-    
-
+  defaults:
+    post: 投稿
+  boards:
+    new:
+      title: 掲示板作成
+    show:
+      title: 掲示板詳細
+  comments:
+    comment_success: コメントを作成しました
+    comment_danger: コメントを作成出来ませんでした
+  
