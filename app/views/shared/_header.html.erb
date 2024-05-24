@@ -15,10 +15,8 @@
             期限チェック
           <% end %>
           <div class='dropdown-menu dropdown-menu-end'>
-            <%= link_to "期限チェックリスト", boards_path, class: 'dropdown-item' %>
-            <%= link_to('#', class: 'dropdown-item') do %>
-              期限チェックリスト作成
-            <% end %>
+            <%= link_to t('header.board_index'), boards_path, class: 'dropdown-item' %>
+            <%= link_to t('header.create_board'), new_board_path, class: 'dropdown-item' %>
           </div>
         </li>
 

@@ -27,8 +27,8 @@ ja:
     login: ログイン
     logout: ログアウト
     board: 掲示板
-    board_index: 掲示板一覧
-    create_board: 掲示板作成
+    board_index: 期限チェックリスト
+    create_board: 期限チェックリスト作成
     bookmark_index: ブックマーク一覧
     profile: プロフィール
     deadline:
@@ -37,6 +37,9 @@ ja:
     formats:
       short: "%Y/%m/%d %H:%M"
   flash:
-    not_authenticated: "ログインしてください"
+    not_authenticated: ログインしてください
+    boards:
+      success: 期限チェックリストを作成できました
+      danger: 期限チェックリストを作成できませんでした
     
 
