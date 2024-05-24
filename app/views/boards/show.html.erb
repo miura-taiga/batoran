@@ -6,7 +6,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-md-9">
-              <h3 style="display: inline;"><%= @store.name %></h3>
+              <h3 style="display: inline;"><%= @store_name %></h3>
               <ul class="list-inline">
                 <li class="list-inline-item"><%= "by #{@board.user.decorate.full_name}" %></li>
                 <li class="list-inline-item"><%= l @board.created_at, format: :long %></li>
@@ -22,9 +22,9 @@
             </div>
           </div>
           <p>
-            商品名: <%= @product.name %><br>
-            JANコード: <%= @product.jan_code %><br>
-            期限日: <%= l @product.expiration_date, format: :long %>
+            商品名: <%= @board.product_name %><br>
+            JANコード: <%= @board.jan_code %><br>
+            期限日: <%= l @board.expiration_date, format: :long %>
           </p>
         </div>
       </article>
